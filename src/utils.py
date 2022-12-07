@@ -4,6 +4,12 @@ import sys
 ROOT_FOLDER = os.path.dirname(os.path.dirname(__file__))
 DATA_FOLDER = os.path.join(ROOT_FOLDER, 'data')
 
+def common_char(string1, string2):
+    return ''.join(set(string1).intersection(string2))
+
+def common_char_three(string1, string2, string3):
+    tmp = ''.join(set(string1).intersection(string2))
+    return ''.join(set(string3).intersection(tmp))
 
 def get_instructions(day, expected_lines):
     
